@@ -62,7 +62,9 @@ public class CVConstraintMaker {
     /// 初始化方法，保存需要布局的item
     internal init(item: CVLayoutConstraintItem) {
         self.item = item
-        self.item.prepare()
+        if let view = item as? CVConstraintView {
+            view.translatesAutoresizingMaskIntoConstraints = false
+        }
     }
     
 
@@ -76,6 +78,10 @@ public class CVConstraintMaker {
         }
         
         CVLayout.activate(allLayout)
+//        if let view = item as? CVConstraintView {
+//            view.removeAllLayouts()
+//            view.add(layouts: allLayout)
+//        }
     }
 }
 

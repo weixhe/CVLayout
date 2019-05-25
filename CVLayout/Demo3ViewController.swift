@@ -39,8 +39,8 @@ class Demo3ViewController: UIViewController {
         v21.backgroundColor = UIColor.red
         v2.addSubview(v21)
         v21.cv.makeConstraints { (make) in
-            make.left.equalTo(v1).offset(0)
-            make.top.equalTo(v1.cv.bottom).offset(10)
+            make.left.equalTo(v2).offset(0)
+            make.top.equalTo(v2).offset(10)
             make.width.height.equalTo(v2).multipliedBy(0.5)
         }
         

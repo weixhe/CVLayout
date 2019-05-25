@@ -24,11 +24,12 @@ public final class CVConstraint {
     /** 对应的倍数 */
     private var multiplier: CVMultiplierTarget
     /** 设置约束的数值，后期可以更新 */
-    private var constant: CVConstantTarget {
-        didSet {
-            self.updateConstant()
-        }
-    }
+    private var constant: CVConstantTarget
+//    {
+//        didSet {
+//            self.updateConstant()
+//        }
+//    }
 
     private var file: StaticString = #file
     private var line: UInt = #line
@@ -134,42 +135,47 @@ extension CVConstraint {
     }
     
     /// 激活约束，在需要的情况下, updatingExisting: 更新或者新增
-    internal func activateIfNeeded(updatingExisting: Bool = false) {
-        guard let item = self.from.layoutConstraintItem else {
-            fatalError("警告：没有找到需要约束的view，该约束无效", file: file, line: line)
-        }
-        
-        // 更新from item 上的所有的layout
-        let layouts = self.layouts
-
-        if updatingExisting {
-            // 用来存储已存在的layout
-            var existLayouts: [CVLayout] = []
-            
-            // 先取出现有的约束
-            for constraint in item.constraints {
-                existLayouts += constraint.layouts
-            }
-            
-            // 遍历 layouts 数组，
-            for layout in self.layouts {
-                let existingLayout = existLayouts.first { $0 == layout }
-                // 判断 existingLayout 是否存在
-                guard let updateLayout = existingLayout else {
-                    fatalError("警告: 约束 \(layout) 不存在", file: file, line: line)
-                }
-                
-                let updateLayoutAttribute = (updateLayout.toAttribute == .none) ? updateLayout.fromAttribute : updateLayout.toAttribute
-                
-                updateLayout.constant = self.constant.constrantTargetFor(layoutAttribute: updateLayoutAttribute)
-            }
-            
-        } else {
-            
-            CVLayout.activate(layouts)
-            item.add(constraints: [self])
-        }
-    }
+//    internal class func activateIfNeeded(updatingExisting: Bool = false) {
+//        guard let item = self.from.layoutConstraintItem else {
+//            fatalError("警告：没有找到需要约束的view，该约束无效", file: file, line: line)
+//        }
+//
+//        // 更新from item 上的所有的layout
+//        let layouts = self.layouts
+//
+//        if updatingExisting {
+//            // 用来存储已存在的layout
+//            var existLayouts: [CVLayout] = []
+//
+//            // 先取出现有的约束
+//            if let view = item as? CVConstraintView {
+//                for constraint in view.cv.constraints {
+//                    existLayouts += constraint.layouts
+//                }
+//            }
+//
+//            // 遍历 layouts 数组，
+//            for layout in self.layouts {
+//                let existingLayout = existLayouts.first { $0 == layout }
+//                // 判断 existingLayout 是否存在
+//                guard let updateLayout = existingLayout else {
+//                    fatalError("警告: 约束 \(layout) 不存在", file: file, line: line)
+//                }
+//
+//                let updateLayoutAttribute = (updateLayout.toAttribute == .none) ? updateLayout.fromAttribute : updateLayout.toAttribute
+//
+//                updateLayout.constant = self.constant.constrantTargetFor(layoutAttribute: updateLayoutAttribute)
+//            }
+//
+//        } else {
+//
+//            CVLayout.activate(layouts)
+//            if let view = item as? CVConstraintView {
+////                view.cv.constraints.removeAll()
+//                view.cv.add(constraints: [self])
+//            }
+//        }
+//    }
     
 //    /// 禁用约束，在需要的条件下
 //    internal func deactivateIfNeeded() {

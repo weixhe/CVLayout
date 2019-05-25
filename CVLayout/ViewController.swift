@@ -13,11 +13,15 @@ class ViewController: UIViewController {
     let dataSource: [String] = ["测试 left, top, right, bottom, offset",
                                 "测试 edges，size",
                                 "测试 width， height, multiplied",
-                                "测试 centerX  centerY  center"]
+                                "测试 centerX  centerY  center",
+                                "自动计算 label 的宽度高度",
+                                "自动计算 label 的宽度高度(富文本)"]
     let classSource: [String] = ["Demo1ViewController",
                                  "Demo2ViewController",
                                  "Demo3ViewController",
-                                 "Demo4ViewController"]
+                                 "Demo4ViewController",
+                                 "Demo5ViewController",
+                                 "Demo6ViewController"]
 
     lazy var tableView: UITableView = {
         

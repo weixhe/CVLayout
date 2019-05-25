@@ -38,6 +38,8 @@
 		8495688A2290F8B800D46A6C /* CVConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849568892290F8B800D46A6C /* CVConstraintMakerEditable.swift */; };
 		8495688D229139AA00D46A6C /* CVConstraintMakerAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495688C229139AA00D46A6C /* CVConstraintMakerAttribute.swift */; };
 		8495688F2291587D00D46A6C /* CVConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495688E2291587D00D46A6C /* CVConstraintDescription.swift */; };
+		84A3426A2298E50B0086B64C /* Demo5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A342692298E50B0086B64C /* Demo5ViewController.swift */; };
+		84A34294229948960086B64C /* Demo6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A34293229948960086B64C /* Demo6ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		849568892290F8B800D46A6C /* CVConstraintMakerEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		8495688C229139AA00D46A6C /* CVConstraintMakerAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConstraintMakerAttribute.swift; sourceTree = "<group>"; };
 		8495688E2291587D00D46A6C /* CVConstraintDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVConstraintDescription.swift; sourceTree = "<group>"; };
+		84A342692298E50B0086B64C /* Demo5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo5ViewController.swift; sourceTree = "<group>"; };
+		84A34293229948960086B64C /* Demo6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo6ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				841BF4C02298203400AC38A1 /* Demo2ViewController.swift */,
 				841BF4C2229820DE00AC38A1 /* Demo3ViewController.swift */,
 				841BF4C42298211100AC38A1 /* Demo4ViewController.swift */,
+				84A342692298E50B0086B64C /* Demo5ViewController.swift */,
+				84A34293229948960086B64C /* Demo6ViewController.swift */,
 				849568082281B1E300D46A6C /* Main.storyboard */,
 				8495680B2281B1E300D46A6C /* Assets.xcassets */,
 				8495680D2281B1E300D46A6C /* LaunchScreen.storyboard */,
@@ -272,11 +278,13 @@
 				849568052281B1E300D46A6C /* AppDelegate.swift in Sources */,
 				841BF4C52298211100AC38A1 /* Demo4ViewController.swift in Sources */,
 				841BF4C12298203400AC38A1 /* Demo2ViewController.swift in Sources */,
+				84A3426A2298E50B0086B64C /* Demo5ViewController.swift in Sources */,
 				849568272281CEE700D46A6C /* CVMultiplierTarget.swift in Sources */,
 				8495688A2290F8B800D46A6C /* CVConstraintMakerEditable.swift in Sources */,
 				841BF4C3229820DE00AC38A1 /* Demo3ViewController.swift in Sources */,
 				849568372287B59500D46A6C /* CVLayout.swift in Sources */,
 				8495687F22903F2800D46A6C /* CVConstraintViewDSL.swift in Sources */,
+				84A34294229948960086B64C /* Demo6ViewController.swift in Sources */,
 				8495683D2288683200D46A6C /* CVConstraintPriority.swift in Sources */,
 				8495683522872E7C00D46A6C /* CVConstantTarget.swift in Sources */,
 				8495682C2286FF7C00D46A6C /* CVConstraintView.swift in Sources */,

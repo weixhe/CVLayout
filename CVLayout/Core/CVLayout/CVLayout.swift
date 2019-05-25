@@ -163,6 +163,16 @@ extension CVLayout {
         
         // 布局完成以后，检查是否有宽度、高度，如果没有，检查是否是label，
         // 如果是label，则需要自动计算宽度或者高度
+        if width == 0 {
+            if let label = view as? UILabel {
+                width = label.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: height)).width
+            }
+        }
+        if height == 0 {
+            if let label = view as? UILabel {
+                height = label.sizeThatFits(CGSize(width: width, height: CGFloat(MAXFLOAT))).height
+            }
+        }
         
         // 最终结果，将frame设置到view上
         view.frame = CGRect(x: x, y: y, width: width, height: height)
