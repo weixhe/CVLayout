@@ -83,6 +83,16 @@ public class CVConstraintMaker {
 //            view.add(layouts: allLayout)
 //        }
     }
+    
+//    internal class func updateConstraints(file: StaticString = #file, line: UInt = #line) {
+//        if let view = item as? CVConstraintView {
+//            CVLayout.activate(view.layouts)
+//        }
+//    }
+//
+//    internal class func updateConstraints(file: StaticString = #file, line: UInt = #line, _ closure: (_ make: CVConstraintMaker) -> Void) {
+//
+//    }
 }
 
 extension CVConstraintMaker {

@@ -40,6 +40,10 @@ class Demo6ViewController: UIViewController {
         let label4 = UILabel()
         label4.backgroundColor = UIColor.gray
         
+        
+        label4.textColor = UIColor.white
+        label4.numberOfLines = 0
+        
         let label4_attri = NSMutableAttributedString(string: txt4)
         label4_attri.addAttribute(.kern, value: 4, range: NSRange(location: 0, length: txt4.count))
         let label4_para = NSMutableParagraphStyle()
@@ -47,8 +51,7 @@ class Demo6ViewController: UIViewController {
         label4_attri.addAttribute(.paragraphStyle, value: label4_para, range: NSRange(location: 0, length: txt4.count))
         label4.attributedText = label4_attri
         
-        label4.textColor = UIColor.white
-        label4.numberOfLines = 0
+
         view.addSubview(label4)
         label4.cv.makeConstraints { (make) in
             make.left.right.equalTo(10)
